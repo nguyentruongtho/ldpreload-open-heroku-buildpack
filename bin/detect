@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if command -v gcc >/dev/null; then
+  echo "ldpreload-open"
+  exit 0
+else
+  echo "Please install gcc"
+  exit 1
+fi
+
